@@ -6,6 +6,7 @@ CREATE TABLE menu (
 	pozycja INTEGER DEFAULT 0
 );
 
+<<<<<<< HEAD
 INSERT INTO menu VALUES(NULL, 'witam', 'Witamy', 1);
 INSERT INTO menu VALUES(NULL, 'formularz', 'Formularz', 2);
 INSERT INTO menu VALUES(NULL, 'klasa', 'Klasa', 3);
@@ -17,3 +18,8 @@ CREATE TABLE posty (
 
 -- INSERT INTO menu(tytul, plik, id) VALUES('Klasa', 'klasa', NULL);
 -- sqlite3 baza.db < baza.sql
+=======
+INSERT INTO	 menu VALUES(NULL, 'witam', 'Witamy', 1);
+INSERT INTO	 menu VALUES(NULL, 'formularz', 'Formularz', 2);
+INSERT INTO	 menu VALUES(NULL, 'klasa', 'Klasa', 3);
+>>>>>>> 723a2a0a0249ac91a74014ae59be357af86d6933
