@@ -55,9 +55,9 @@ function clrtxt(&$el, $maxdl=30) {
     }
 }
 
-function get_koms(){
+function get_koms() {
 	global $kom;
-	foreach ($kom as $k){
+	foreach ($kom as $k) {
 		echo "<p class=\"text-info\">$k</p>";
 	}
 }
