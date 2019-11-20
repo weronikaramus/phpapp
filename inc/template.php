@@ -10,37 +10,28 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-light">
         <a class="navbar-brand" href="http://lo1.sandomierz.pl">I LO CG</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
-<<<<<<< HEAD
 <?php get_menu($id); ?>
-=======
-                <?php get_menu($id); ?>
->>>>>>> 723a2a0a0249ac91a74014ae59be357af86d6933
             </ul>
         </div>
     </nav>
 
 <div class="jumbotron">
-<<<<<<< HEAD
   <h1><?php get_page_title($id); ?></h1>
   <p>Pierwsza aplikacja w PHP</p>
-=======
-  	<h1><?php get_page_title($id); ?></h1>
-  	<p>Cokolwiek</p>
->>>>>>> 723a2a0a0249ac91a74014ae59be357af86d6933
 </div>
 
 		<div class="container">
 			<div class="row">
-<<<<<<< HEAD
 				<div class="col">
 				<?php
+                    get_koms();
 					get_page_content($id);
 				?>
 				</div>
@@ -53,20 +44,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
-=======
-					<div class="col">
-<?php
-	get_page_content($id);
-?>
-					</div>
-					<div class="col"></div>
-			</div>
-		</div>
-
- 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-
->>>>>>> 723a2a0a0249ac91a74014ae59be357af86d6933
 </html>

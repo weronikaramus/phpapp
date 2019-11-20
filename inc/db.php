@@ -5,10 +5,6 @@ function init_baza() {
 
 	$db = new PDO("sqlite:$dbfile");
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-<<<<<<< HEAD
-=======
-
->>>>>>> 723a2a0a0249ac91a74014ae59be357af86d6933
 }
 
 
@@ -17,23 +13,8 @@ function init_tables() {
 	if (file_exists(DBASE.'baza.sql')) {
 		$sql = file_get_contents(DBASE.'baza.sql', 'r');
 		$q = "SELECT name FROM sqlite_master WHERE type='table' AND name='menu'";
-		$ret = $db->query($q);
-<<<<<<< HEAD
-		//$db->exec($sql);
-		// $kom[] = "Utworzono tabele!";
-	}
-}
-
-
-function db_query($q, &$ret) {
-	global $db;
-	try {
-		$r = $db->query($q, PDO::FETCH_ASSOC);
-	} catch(PDOException $e) {
-		echo ($e->getMessage());
-	}
-	if ($r) {
-=======
+		$ret = array();
+		db_query($q, $ret);
 		if (empty($ret)) {
 			$db->exec($sql);
 			$kom[] = "Utworzono tabele!";
@@ -41,16 +22,17 @@ function db_query($q, &$ret) {
 	}
 }
 
-function db_query($q, &$ret){
+
+function db_query($q, &$ret) {
 	global $db;
+	$r = null;
 	try {
-		$r = $db->query($q, PDO::FETCH_ASSOC);
-	} catch(PDOException $e){
+		$r = $db->query($q);
+	} catch(PDOException $e) {
 		echo ($e->getMessage());
 	}
-	if($r){
->>>>>>> 723a2a0a0249ac91a74014ae59be357af86d6933
-		$ret = $r->fetchAll();
+	if ($r) {
+		$ret = $r->fetchAll(PDO::FETCH_ASSOC);
 		return true;
 	}
 	return false;

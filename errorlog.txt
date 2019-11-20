@@ -1,0 +1,22 @@
+[20-Nov-2019 09:21:57 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$ok' (T_VARIABLE) in /home/kl2ag1/public_html/phpapp/userform.html on line 20
+[20-Nov-2019 09:23:47 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$ok' (T_VARIABLE) in /home/kl2ag1/public_html/phpapp/userform.html on line 20
+[20-Nov-2019 09:24:00 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/userform.html on line 21
+[20-Nov-2019 09:24:02 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/userform.html on line 21
+[20-Nov-2019 09:24:26 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/userform.html on line 27
+[20-Nov-2019 09:24:27 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/userform.html on line 27
+[20-Nov-2019 09:24:32 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/kl2ag1/public_html/phpapp/userform.html on line 30
+[20-Nov-2019 09:25:11 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/kl2ag1/public_html/phpapp/userform.html on line 30
+[20-Nov-2019 09:26:17 Europe/Warsaw] PHP Fatal error:  Only variables can be passed by reference in /home/kl2ag1/public_html/phpapp/inc/users.php on line 37
+[20-Nov-2019 09:26:21 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/kl2ag1/public_html/phpapp/userform.html on line 30
+[20-Nov-2019 09:26:24 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/kl2ag1/public_html/phpapp/userform.html on line 30
+[20-Nov-2019 09:27:01 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/kl2ag1/public_html/phpapp/userform.html on line 30
+[20-Nov-2019 09:28:13 Europe/Warsaw] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function db_query(), 1 passed in /home/kl2ag1/public_html/phpapp/inc/users.php on line 38 and exactly 2 expected in /home/kl2ag1/public_html/phpapp/inc/db.php:26
+Stack trace:
+#0 /home/kl2ag1/public_html/phpapp/inc/users.php(38): db_query('SELECT id FROM ...')
+#1 /home/kl2ag1/public_html/phpapp/userform.html(10): User->is_login('admin')
+#2 /home/kl2ag1/public_html/phpapp/inc/functions.php(41): include('/home/kl2ag1/pu...')
+#3 /home/kl2ag1/public_html/phpapp/inc/template.php(34): get_page_content('userform')
+#4 /home/kl2ag1/public_html/phpapp/index.php(28): include_once('/home/kl2ag1/pu...')
+#5 {main}
+  thrown in /home/kl2ag1/public_html/phpapp/inc/db.php on line 26
+[20-Nov-2019 09:33:17 Europe/Warsaw] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/kl2ag1/public_html/phpapp/userform.html on line 15
