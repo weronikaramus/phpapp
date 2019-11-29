@@ -10,35 +10,36 @@
 // tablica asocjcyjna, która będzie zawierała wyniki zapytań
 $ret = array();
 
-function get_menu($id) {
-	global $db, $ret;
-	db_query('SELECT * FROM menu', $ret);
+function get_menu($id, $strona) {
+	Baza::db_query('SELECT * FROM menu');
 	//print_r($ret);
- 	foreach ($ret as $k => $t) {
+ 	foreach (Baza::$ret as $k => $t) {
 		echo '
 <li class="nav-item">
-    <a class="nav-link" href="?id='.$t['plik'].'">'.$t['tytul'].'</a>
+    <a class="nav-link';
+
+    if ($t['id'] == $id) {
+    	echo ' active ';
+    	$strona = $t;
+    }
+
+    echo '" href="?id='.$t['plik'].'">'.$t['tytul'].'</a>
 </li>
 		';
 	}
 }
 
-function get_page_title($id) {
-	global $ret;
-	foreach ($ret as $k => $t) {
-		//echo $t['id']." ";
-		if ($t['plik'] == $id) {
-			echo $t['tytul'];
-			return;
-		}
-	}
-	// tytuł domyślny
-	echo 'Aplikacja PHP';
+function get_page_title($strona) {
+	if (array_key_exists('tytul', $strona))
+		echo $strona['tytul'];
+	else
+		echo 'Aplikacja PHP';
 }
 
 function get_page_content($id) {
-	if (file_exists($id.'.html'))
-		include($id.'.html');
+	if (array_key_exists('plik', $strona))
+	if (file_exists($strona['plik'].'.html'))
+		include($strona['plik'].'.html');
 	else
 		include('404.html');
 }
@@ -55,8 +56,7 @@ function clrtxt(&$el, $maxdl=30) {
     }
 }
 
-function get_koms() {
-	global $kom;
+function get_koms($kom) {
 	foreach ($kom as $k) {
 		echo "<p class=\"text-info\">$k</p>";
 	}
