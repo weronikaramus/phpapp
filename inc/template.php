@@ -34,7 +34,6 @@
 			get_page_content($strona);
             get_koms(Baza::$kom);
             get_koms($kom);
-
 		?>
 		</div>
 		<div class="col"></div>

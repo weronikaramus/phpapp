@@ -1,32 +1,40 @@
-[20-Nov-2019 09:21:57 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$ok' (T_VARIABLE) in /home/kl2ag1/public_html/phpapp/userform.html on line 20
-[20-Nov-2019 09:23:47 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '$ok' (T_VARIABLE) in /home/kl2ag1/public_html/phpapp/userform.html on line 20
-[20-Nov-2019 09:24:00 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/userform.html on line 21
-[20-Nov-2019 09:24:02 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/userform.html on line 21
-[20-Nov-2019 09:24:26 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/userform.html on line 27
-[20-Nov-2019 09:24:27 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '}' in /home/kl2ag1/public_html/phpapp/userform.html on line 27
-[20-Nov-2019 09:24:32 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/kl2ag1/public_html/phpapp/userform.html on line 30
-[20-Nov-2019 09:25:11 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/kl2ag1/public_html/phpapp/userform.html on line 30
-[20-Nov-2019 09:26:17 Europe/Warsaw] PHP Fatal error:  Only variables can be passed by reference in /home/kl2ag1/public_html/phpapp/inc/users.php on line 37
-[20-Nov-2019 09:26:21 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/kl2ag1/public_html/phpapp/userform.html on line 30
-[20-Nov-2019 09:26:24 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/kl2ag1/public_html/phpapp/userform.html on line 30
-[20-Nov-2019 09:27:01 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/kl2ag1/public_html/phpapp/userform.html on line 30
-[20-Nov-2019 09:28:13 Europe/Warsaw] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function db_query(), 1 passed in /home/kl2ag1/public_html/phpapp/inc/users.php on line 38 and exactly 2 expected in /home/kl2ag1/public_html/phpapp/inc/db.php:26
+[29-Nov-2019 09:37:13 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Access to undeclared static property: Baza::$db in /home/lo1sand/public_html/phpapp/inc/db.php:10
 Stack trace:
-#0 /home/kl2ag1/public_html/phpapp/inc/users.php(38): db_query('SELECT id FROM ...')
-#1 /home/kl2ag1/public_html/phpapp/userform.html(10): User->is_login('admin')
-#2 /home/kl2ag1/public_html/phpapp/inc/functions.php(41): include('/home/kl2ag1/pu...')
-#3 /home/kl2ag1/public_html/phpapp/inc/template.php(34): get_page_content('userform')
-#4 /home/kl2ag1/public_html/phpapp/index.php(28): include_once('/home/kl2ag1/pu...')
-#5 {main}
-  thrown in /home/kl2ag1/public_html/phpapp/inc/db.php on line 26
-[20-Nov-2019 09:33:17 Europe/Warsaw] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/kl2ag1/public_html/phpapp/userform.html on line 15
-[29-Nov-2019 09:16:18 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function init_baza() in /home/kl2ag1/public_html/phpapp/index.php:18
-Stack trace:
-#0 {main}
-  thrown in /home/kl2ag1/public_html/phpapp/index.php on line 18
-[29-Nov-2019 09:26:47 Europe/Warsaw] PHP Parse error:  syntax error, unexpected ',' in /home/kl2ag1/public_html/phpapp/inc/functions.php on line 21
-[29-Nov-2019 09:32:07 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Access to undeclared static property: Baza::$db in /home/kl2ag1/public_html/phpapp/inc/db.php:11
-Stack trace:
-#0 /home/kl2ag1/public_html/phpapp/index.php(17): Baza->__construct('db/baza.db')
+#0 /home/lo1sand/public_html/phpapp/index.php(17): Baza->__construct('db/baza.db')
 #1 {main}
-  thrown in /home/kl2ag1/public_html/phpapp/inc/db.php on line 11
+  thrown in /home/lo1sand/public_html/phpapp/inc/db.php on line 10
+[04-Dec-2019 09:05:57 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/lo1sand/public_html/phpapp/formularz.html:27
+Stack trace:
+#0 /home/lo1sand/public_html/phpapp/inc/functions.php(41): include()
+#1 /home/lo1sand/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#2 /home/lo1sand/public_html/phpapp/index.php(27): include_once('/home/lo1sand/p...')
+#3 {main}
+  thrown in /home/lo1sand/public_html/phpapp/formularz.html on line 27
+[04-Dec-2019 09:06:04 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/lo1sand/public_html/phpapp/formularz.html:27
+Stack trace:
+#0 /home/lo1sand/public_html/phpapp/inc/functions.php(41): include()
+#1 /home/lo1sand/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#2 /home/lo1sand/public_html/phpapp/index.php(27): include_once('/home/lo1sand/p...')
+#3 {main}
+  thrown in /home/lo1sand/public_html/phpapp/formularz.html on line 27
+[04-Dec-2019 09:06:14 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/lo1sand/public_html/phpapp/formularz.html:27
+Stack trace:
+#0 /home/lo1sand/public_html/phpapp/inc/functions.php(41): include()
+#1 /home/lo1sand/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#2 /home/lo1sand/public_html/phpapp/index.php(27): include_once('/home/lo1sand/p...')
+#3 {main}
+  thrown in /home/lo1sand/public_html/phpapp/formularz.html on line 27
+[04-Dec-2019 09:06:21 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/lo1sand/public_html/phpapp/formularz.html:27
+Stack trace:
+#0 /home/lo1sand/public_html/phpapp/inc/functions.php(41): include()
+#1 /home/lo1sand/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#2 /home/lo1sand/public_html/phpapp/index.php(27): include_once('/home/lo1sand/p...')
+#3 {main}
+  thrown in /home/lo1sand/public_html/phpapp/formularz.html on line 27
+[04-Dec-2019 09:06:27 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Call to undefined function db_query() in /home/lo1sand/public_html/phpapp/formularz.html:27
+Stack trace:
+#0 /home/lo1sand/public_html/phpapp/inc/functions.php(41): include()
+#1 /home/lo1sand/public_html/phpapp/inc/template.php(34): get_page_content(Array)
+#2 /home/lo1sand/public_html/phpapp/index.php(27): include_once('/home/lo1sand/p...')
+#3 {main}
+  thrown in /home/lo1sand/public_html/phpapp/formularz.html on line 27

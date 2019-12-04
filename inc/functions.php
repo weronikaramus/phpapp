@@ -10,20 +10,19 @@
 // tablica asocjcyjna, która będzie zawierała wyniki zapytań
 $ret = array();
 
-function get_menu($id, $strona) {
+function get_menu($id, &$strona) {
 	Baza::db_query('SELECT * FROM menu');
-	//print_r($ret);
  	foreach (Baza::$ret as $k => $t) {
 		echo '
 <li class="nav-item">
     <a class="nav-link';
 
     if ($t['id'] == $id) {
-    	echo ' active ';
+    	echo ' active';
     	$strona = $t;
     }
 
-    echo '" href="?id='.$t['plik'].'">'.$t['tytul'].'</a>
+    echo '" href="?id='.$t['id'].'">'.$t['tytul'].'</a>
 </li>
 		';
 	}
@@ -36,12 +35,12 @@ function get_page_title($strona) {
 		echo 'Aplikacja PHP';
 }
 
-function get_page_content($id) {
+function get_page_content($strona) {
 	if (array_key_exists('plik', $strona))
-	if (file_exists($strona['plik'].'.html'))
-		include($strona['plik'].'.html');
-	else
-		include('404.html');
+		if (file_exists($strona['plik'].'.html'))
+			include($strona['plik'].'.html');
+		else
+			include('404.html');
 }
 
 function clrtxt(&$el, $maxdl=30) {
