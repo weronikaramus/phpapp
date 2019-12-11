@@ -1,19 +1,20 @@
-<?php
+<!-- <?php
 
 if (isset($_POST['login'])) {
     global $user, $kom;
 
     foreach ($_POST as $k => $v) {
         ${$k} = clrtxt($v);
-        // print ${$k}."<br>";
     }
+
     $user->login($login, $haslo);
     print_r($_SESSION);
+
 }
 
-?>
+?> -->
 
-<form action="?id=<?php  echo $strona['id'] ?>" method="POST" name="dane" id="dane">
+<form action="?id=<?php echo $strona['id']; ?>" method="POST" name="dane" id="dane">
     <input type="hidden" name="id_user" value="10">
     <div class="form-group">
         <div class="form-group">
