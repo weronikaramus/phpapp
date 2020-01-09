@@ -39,17 +39,18 @@ echo '</ul>';
 if (isset($_GET['akcja'])) {
     ;  // obsługa edycji
 }
+
+global $user;
+if ($user->id) {
 ?>
 
 <form action="?id=<?php echo $strona['id']; ?>" method="POST" name="dane" id="dane">
-    <input type="hidden" name="id_user" value="10">
-    <div class="form-group">
-        <label for="user">Użytkownik:</label>
-        <input type="text" name="user" id="user" class="form-control">
-    </div>
     <div class="form-group">
         <label for="login">Wiadomość:</label>
         <textarea name="wiadomosc" id="wiadomosc" class="form-control" rows="3"></textarea>
     </div>
     <input type="submit" value="Wyślij" class="btn btn-primary">
 </form>
+<?php
+}
+?>

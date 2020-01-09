@@ -11,16 +11,24 @@ class User {
 
 	function __construct() {
 		if (!isset($_SESSION)) session_start();
-		if (isset($_COOKIE[$this->CookieName]) && !$this->id){
+		if (isset($_COOKIE[$this->CookieName]) && !$this->id) {
 			$c = unserialize(base64_decode($_COOKIE[$this->CookieName]));
-			$this->login($c['login'], $['haslo'], false, true);
+			$this->login($c['login'], $c['haslo'], false, true);
 			$this->kom[] = "Witaj {$this->login}! Zostałeś automatycznie zalogowany!";
 		}
+
+		if (!$this->id && isset($_POST['login2'])) {
+			foreach ($_POST as $k => $v) {
+        ${$k} = clrtxt($v);
+    	}
+    	$this->login($login2, $haslo2, true, true);
+		}
+
 	}
 
-	function login($login, $haslo, $rem=false, $load=true) {
+	function login($login, $haslo, $rem=false, $load=true ) {
 		if ($load && $this->is_user($login, $haslo)) {
-			if ($rem){
+			if ($rem) {
 				$c = base64_encode(serialize(array('login'=>$login, 'haslo'=>$haslo)));
 				$this->kom[] = $c;
 				$a = setcookie($this->CookieName, $c, time()+$this->remTime, '/', 'localhost', false, true);
@@ -78,12 +86,25 @@ class User {
 		if (!$this->id) {
 			$qstr='INSERT INTO users VALUES (NULL,\''.$this->login.'\',\''.$this->haslo.'\',\''.$this->email.'\',time())';
 			Baza::db_exec($qstr);
-			$id = db_lastInsertID();
+			// $id = db_lastInsertID();
 		}
 		if (Baza::$ret) return true;
 		return false;
 	}
 
+	function logout($redirect='') {
+		setcookie($this->CookieName, '', time()-(5*$this->remTime), '/', 'localhost', false, true);
+		$this->dane = array();
+		$_SESSION = array();
+		if (session_destroy()) $this->kom[] = 'Zostałeś wylogowany';
+		if ($redirect != '' && !headers_sent()) {
+			header('Location: '.$redirect);
+			exit;
+		}
+	}
+
 }
+
+// github.com/lo1cgsan/phpapp
 
 ?>
