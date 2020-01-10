@@ -27,9 +27,7 @@ function get_menu($id, &$strona) {
 		';
 	}
 	global $user;
-	if ($user->id) {
-		echo '<li class="nav-item"><a class="nav-link" href="?id=5">Wyloguj</a></li>';
-	}
+
 }
 
 function get_page_title($strona) {

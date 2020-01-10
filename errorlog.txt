@@ -71,3 +71,18 @@ Stack trace:
 [08-Jan-2020 09:32:06 Europe/Warsaw] PHP Notice:  Undefined variable: user in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 7
 [08-Jan-2020 09:33:25 Europe/Warsaw] PHP Notice:  Undefined variable: user in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 7
 [08-Jan-2020 09:34:35 Europe/Warsaw] PHP Notice:  Undefined variable: user in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 7
+[10-Jan-2020 09:57:17 Europe/Warsaw] PHP Notice:  Undefined variable: user in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 7
+[10-Jan-2020 10:04:49 Europe/Warsaw] PHP Parse error:  syntax error, unexpected 'user' (T_STRING), expecting ',' or ')' in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 32
+[10-Jan-2020 10:04:55 Europe/Warsaw] PHP Parse error:  syntax error, unexpected 'user' (T_STRING), expecting ',' or ')' in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 32
+[10-Jan-2020 10:05:01 Europe/Warsaw] PHP Parse error:  syntax error, unexpected 'user' (T_STRING), expecting ',' or ')' in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 32
+[10-Jan-2020 10:06:11 Europe/Warsaw] PHP Parse error:  syntax error, unexpected 'user' (T_STRING), expecting ',' or ')' in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 32
+[10-Jan-2020 10:06:30 Europe/Warsaw] PHP Parse error:  syntax error, unexpected 'Baza' (T_STRING), expecting ',' or ';' in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 35
+[10-Jan-2020 10:06:45 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 35
+[10-Jan-2020 10:07:03 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 35
+[10-Jan-2020 10:07:21 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 35
+[10-Jan-2020 10:08:30 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 35
+[10-Jan-2020 10:08:41 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 35
+[10-Jan-2020 10:09:11 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 35
+[10-Jan-2020 10:09:17 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 35
+[10-Jan-2020 10:13:34 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 35
+[10-Jan-2020 10:15:45 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/kl2ag1/public_html/phpapp/wiadomosci.html on line 35
